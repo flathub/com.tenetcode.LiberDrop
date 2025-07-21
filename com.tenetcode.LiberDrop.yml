@@ -37,8 +37,8 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: file
-        url: https://api.snapcraft.io/api/v1/snaps/download/M5QluFQwD01EhSL4RdXCh3H3g36J7r26_6.snap
-        sha256: a0f837b931e09e857192d94036153942c28eb6bf4b317e0411d76e016612e207
+        url: https://api.snapcraft.io/api/v1/snaps/download/M5QluFQwD01EhSL4RdXCh3H3g36J7r26_7.snap
+        sha256: 8f37f717c55a7ab26a57aa99583897911182d6c2a26c7c6dd54f30a8d28973af
         dest-filename: liberdrop.snap
         only-arches:
           - x86_64
