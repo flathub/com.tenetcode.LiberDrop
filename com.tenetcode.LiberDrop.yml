@@ -1,9 +1,8 @@
 id: com.tenetcode.LiberDrop
 runtime: org.freedesktop.Platform
-runtime-version: "24.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: liberdrop
-
 finish-args:
   - --share=ipc
   - --socket=fallback-x11
@@ -11,7 +10,6 @@ finish-args:
   - --device=dri
   - --share=network
   - --filesystem=xdg-download
-
 modules:
   - name: unsquashfs
     buildsystem: simple
@@ -23,7 +21,6 @@ modules:
         url: https://github.com/plougher/squashfs-tools.git
         tag: 4.6.1
         commit: d8cb82d9840330f9344ec37b992595b5d7b44184
-
   - name: liberdrop
     buildsystem: simple
     build-commands:
@@ -37,8 +34,14 @@ modules:
       - desktop-file-edit --set-icon=${FLATPAK_ID} ${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: file
-        url: https://api.snapcraft.io/api/v1/snaps/download/M5QluFQwD01EhSL4RdXCh3H3g36J7r26_8.snap
-        sha256: 91345151c5a814c77836ceffe7eec33b91338537ba59fd39ba870d74de0cca9c
+        url: https://api.snapcraft.io/api/v1/snaps/download/M5QluFQwD01EhSL4RdXCh3H3g36J7r26_9.snap
+        sha256: 636bdb1e12f6dc8405257b2aa5c05861b7db6fe67e904cbed1edb34a2497c09a
         dest-filename: liberdrop.snap
         only-arches:
           - x86_64
+      - type: file
+        url: https://api.snapcraft.io/api/v1/snaps/download/M5QluFQwD01EhSL4RdXCh3H3g36J7r26_10.snap
+        sha256: 646fcf4df63a4af069a37b77d07d176ef32da761c5147c0946e2fe717283536d
+        dest-filename: liberdrop.snap
+        only-arches:
+          - aarch64
